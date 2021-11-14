@@ -1,38 +1,165 @@
+/***************
+ * BASE STYLES *
+ ****************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #fff;
+    --grey: #808080;
+    --background: #f0f2f5;
+    --hover-shadow: #f2f2f2;
+    --border: #ccc;
+    --box-shadow: rgba(0,0,0,0.2);
+    --reactions-links: #65676b;
+    --black1: #1c1e21;
+    --black2: #050505;
+    --green: #2f9a48;
+}
+
+html {
+    height:100%;
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--background);
+    min-height: 100%;
+    font-size: 1.6rem;
+    font-family: "Segoe UI", Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: cornflowerblue;
+}
+
+
 .App {
-  text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#nav_button {
+    display: inline;
+    width: 100%;
+    text-align: center;
+    min-height: 2rem;
+    background-color: #1c1e21;
+    color: #cccccc;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    position: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/***************
+ * POST STYLES *
+ ****************/
+
+.post {
+    background: var(--white);
+    min-width: 35rem;
+    max-width: 60rem;
+    padding-bottom: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.1rem 0.2rem var(--box-shadow);
+    margin-bottom: 3rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.post:first-of-type{
+    margin-top: 5rem;
+}
+.post:last-of-type{
+    margin-bottom: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.post_header {
+    display: flex;
+    justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.header_left {
+    float: left;
+    text-align: center;
+    width: 20%;
+    margin: 0;
+    padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header_right{
+    float: right;
+    width: 80%;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 2rem;
+    padding-left: 1rem;
+}
+
+.author_name:hover{
+    text-decoration: underline;
+}
+
+.post_author_pic {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin-top: 0.5rem;
+    box-shadow: 0 0.1rem 0.2rem var(--box-shadow);
+}
+.author_name {
+    font-size: 0.8rem;
+    color: var(--grey);
+}
+
+.content{
+    padding: 1rem 2rem 1rem 2rem;
+    font-size: 1.5rem;
+}
+
+/***************
+ * POPUP STYLES *
+ ****************/
+
+.popup {
+    position: fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+
+.popup_inner {
+    position: relative;
+    border-radius: 1rem;
+    background: #fff;
+    width: 40%;
+    height: auto;
+    margin: 10rem auto auto auto;
+    padding: 1rem;
+}
+
+
+input[type=text], select{
+    width: 80%;
+    padding: 1rem 1rem;
+    margin: 1rem 0;
+    border: 0.1rem solid #65676b;
+    border-radius: 1rem;
+    box-sizing: border-box;
+}
+
+#text {
+    width: 80%;
+    height: 20rem;
 }
