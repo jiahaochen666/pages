@@ -27,7 +27,6 @@ function PopupApp() {
         const newData = {...data};
         newData[e.target.id] = e.target.value;
         setData(newData);
-        console.log(newData)
     }
 
     const submitHandler = (e) => {
@@ -43,7 +42,6 @@ function PopupApp() {
                 body: JSON.stringify(data)
             }
         ).then(res => {
-            console.log(res.data);
             document.getElementById("username").value = '';
             document.getElementById("title").value = '';
             document.getElementById("text").value = '';
@@ -51,7 +49,6 @@ function PopupApp() {
             data.text = '';
             data.title = '';
             setPopup(false);
-            window.location.reload();
         })
     }
 
