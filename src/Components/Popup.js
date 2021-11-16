@@ -49,6 +49,7 @@ function PopupApp() {
             data.text = '';
             data.title = '';
             setPopup(false);
+            window.location.reload();
         })
     }
 
